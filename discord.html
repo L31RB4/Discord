@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            Discord
+        </title>
+        <style>
+            #discordLogo {
+            transition: transform 0.3s ease;
+        }
+
+        #discordLogo:hover {
+            transform: scale(0.9);
+        }
+
+        body {
+            background-image: url('https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2020/10/discord.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: url('https://www.freepnglogos.com/uploads/discord-logo-png/seven-kingdoms-9.png'), auto;
+        }
+        </style>
+    </head>
+    <body>
+        <img src="discord.png" id="discordLogo" width="140px" height="auto" onmouseover="zoomIn()" onclick="playSound()" onmouseout="zoomOut()">
+            <div>
+                <br>
+                <b style="color: white;">ㅤClick Above!</b>
+              </div>
+        <center>
+            <iframe src="https://discord.com/widget?id=1173943806727569408&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </center>
+    </body>
+    <script>
+        function playSound() {
+            var audio = new Audio('discord-notification.mp3');
+            audio.play();
+        }
+
+        function zoomIn() {
+            var discordLogo = document.getElementById('discordLogo');
+            discordLogo.style.transform = 'scale(1)';
+        }
+
+        function zoomOut() {
+            var discordLogo = document.getElementById('discordLogo');
+            discordLogo.style.transform = 'scale(0.9)';
+        }
+    </script>
+</html>
